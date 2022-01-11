@@ -2,8 +2,8 @@
     <ItemGroup>
         <SourceScriptFiles Include="$(MSBuildThisFileDirectory)..\content\scriptsToGenerate\*.js" />
     </ItemGroup>
-    <Target Name="CopyScriptsToProject" BeforeTargets="Build">
-        <Copy SourceFiles="@(SourceScriptFiles)" DestinationFolder="$(ProjectDir)\wwwroot\js\scriptsToGenerate\"
+    <Target Name="CopyScriptsToProject" AfterTargets="Build">
+        <Copy SourceFiles="@(SourceScriptFiles)" DestinationFolder="$(OutputPath)\wwwroot\js\scriptsToGenerate\"
         />
     </Target>
 </Project>
