@@ -1,9 +1,8 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <ItemGroup>
-        <SourceScriptFiles Include="$(MSBuildThisFileDirectory)..\content\scriptsToGenerate\*.js" />
+        <SourceScriptFiles Include="$(MSBuildThisFileDirectory)..\content\filesToAdd\*.txt" />
     </ItemGroup>
     <Target Name="CopyScriptsToProject" AfterTargets="Build">
-        <Copy SourceFiles="@(SourceScriptFiles)" DestinationFolder="$(OutputPath)\wwwroot\js\scriptsToGenerate\"
-        />
+        <Copy SourceFiles="@(SourceScriptFiles)" DestinationFolder="$(OutputPath)\filesToAdd\"/>
     </Target>
 </Project>

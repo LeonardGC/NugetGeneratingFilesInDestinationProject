@@ -7,7 +7,7 @@
   <ItemGroup Label="Packaging">
     <Content Include="build\PackageToGenerateFile.targets" PackagePath="build\PackageToGenerateFile.targets" />
 
-    <Content Include="scriptsToGenerate/*.js">
+    <Content Include="filesToAdd/*.txt">
       <Pack>true</Pack>
     </Content>
   </ItemGroup>
